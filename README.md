@@ -1,2 +1,2 @@
-# tech-initiative
-The website of the SEC tech initiative.
+# gunn-launchpad
+The website for the SEC Launchpad initiative.
