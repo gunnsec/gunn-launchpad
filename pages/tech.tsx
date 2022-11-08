@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import MockPage from '../components/MockPage';
 import Section from '../components/Section';
+import {ReactNode} from 'react';
 
 
 export default function Tech() {
@@ -42,11 +43,78 @@ export default function Tech() {
                 <MockPage right />
             </div>
 
-            <section className="-mt-24 pt-36 pb-8 my-4 bg-gray-100 dark:bg-dark">
+            <section className="-mt-24 pt-36 pb-12 my-4 bg-gray-100 dark:bg-dark">
                 <div className="container">
-                    aaa
+                    <ol className="flex flex-col gap-12 pl-20 list-outside list-decimal marker:font-bold marker:text-4xl marker:text-grapefruit">
+                        <Benefit name="Publicity">
+                            Seeking new users and publicity? SEC can help promote your app or idea on ___, ___.
+                        </Benefit>
+                        <Benefit name="Funding">
+                            Maintenance and hosting fees and domain name costs can be too much for some developers. SEC
+                            can help cover those costs so ___.
+                        </Benefit>
+                        <Benefit name="___">
+                            ___.
+                        </Benefit>
+                    </ol>
                 </div>
             </section>
+
+            <Section>
+                <div className="flex gap-8">
+                    <div className="w-52 flex-none">
+                        <h2 className="text-4xl font-bold mb-5">Eligibility Criteria</h2>
+                        <p>Before a project can be chartered, it must meet the following criteria for eligibility.</p>
+                    </div>
+                    <ol className="flex flex-col gap-10 pl-16 list-outside list-decimal marker:font-bold marker:text-2xl marker:text-grapefruit">
+                        <Requirement name="Open source">
+                            All chartered projects must have their source code available online for transparency and
+                            accountability. We recommend using <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-grapefruit hover:underline">GitHub</a> to
+                            host your code, but any online hosting / version control service works.
+                        </Requirement>
+                        <Requirement name="Gunn-made">
+                            All chartered projects must be made primarily by Gunn students. {/* vetting? */}
+                        </Requirement>
+                        <Requirement name="General use">
+                            All chartered projects must be applicable to the student body at large. To clarify, this rule
+                            does not enforce utilitarianism or discourage fun projects: games, ___, and ___ are totally
+                            allowed! Rather, this rule disallows projects specifically for a given club, team, or group;
+                            chartered projects must be usable by the whole school.
+                        </Requirement>
+                    </ol>
+                </div>
+            </Section>
+
+            <Section secondary>
+                <h2 className="text-4xl font-bold mb-5">Chartering</h2>
+                ___.
+            </Section>
+
+            <Section>
+                ___.
+            </Section>
         </div>
+    )
+}
+
+function Benefit(props: {children: ReactNode, name: string}) {
+    return (
+        <li>
+            <div className="flex flex-col gap-3 pl-8">
+                <h3 className="text-4xl font-bold">{props.name}</h3>
+                <p>{props.children}</p>
+            </div>
+        </li>
+    )
+}
+
+function Requirement(props: {children: ReactNode, name: string}) {
+    return (
+        <li>
+            <div className="flex flex-col gap-3 pl-8">
+                <h3 className="text-2xl font-bold">{props.name}</h3>
+                <p>{props.children}</p>
+            </div>
+        </li>
     )
 }
