@@ -7,6 +7,7 @@ class LaunchpadDocument extends Document {
             <Html className="dark">
                 <Head>
                     <meta charSet="utf-8" />
+                    <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <body className="text-dark dark:text-white dark:bg-midnight">
                     <Main />

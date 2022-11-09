@@ -1,19 +1,23 @@
+import {ReactNode} from 'react';
 import Head from 'next/head';
 import MockPage from '../components/MockPage';
 import Section from '../components/Section';
-import {ReactNode} from 'react';
+import Header from '../components/Header';
 
 
 export default function Tech() {
     return (
-        <div className="pt-28">
+        <div>
             <Head>
                 <title>Tech Initiative | Gunn Launchpad</title>
+                <meta name="description" content="___." />
             </Head>
+
+            <Header />
 
             <section className="flex flex-col items-center mb-12">
                 <h1 className="text-7xl font-bold mb-6 text-center">Tech Initiative</h1>
-                <button className="font-medium py-2 px-4 rounded bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 shadow-md shadow-red-700">
+                <button className="font-medium py-2 px-4 rounded bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 shadow-md shadow-red-700 text-white">
                     Register now
                 </button>
             </section>
