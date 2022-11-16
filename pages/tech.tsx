@@ -2,18 +2,15 @@ import {ReactNode} from 'react';
 import Head from 'next/head';
 import MockPage from '../components/MockPage';
 import Section from '../components/Section';
-import Header from '../components/Header';
 
 
 export default function Tech() {
     return (
-        <div>
+        <main>
             <Head>
                 <title>Tech Initiative | Gunn Launchpad</title>
                 <meta name="description" content="___." />
             </Head>
-
-            <Header />
 
             <section className="relative flex flex-col items-center -mb-5 z-10 px-4">
                 <h1 className="text-7xl font-bold mb-6 text-center">Tech Initiative 🚀</h1>
@@ -100,7 +97,7 @@ export default function Tech() {
             <Section>
                 ___.
             </Section>
-        </div>
+        </main>
     )
 }
 
