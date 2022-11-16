@@ -16,14 +16,15 @@ export default function Tech() {
             <Header />
 
             <section className="relative flex flex-col items-center -mb-5 z-10 px-4">
-                <h1 className="text-7xl font-bold mb-6 text-center">Tech Initiative 🚀{/* 🚀*/}</h1>
+                <h1 className="text-7xl font-bold mb-6 text-center">Tech Initiative 🚀</h1>
                 <button className="font-medium py-2 px-4 rounded bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 shadow-md shadow-red-700 text-white">
                     Register now
                 </button>
             </section>
 
             <div className="relative mx-auto max-w-[90%] xl:container">
-                <img src="/ide.png" alt="IDE" className="w-full opacity-60 rounded-t-lg sm:h-[16rem] md:h-[20rem] lg:h-[24rem] object-cover object-top" />
+                <img src="/ide-dark.png" alt="IDE" className="hidden dark:block w-full opacity-60 rounded-t-lg sm:h-[16rem] md:h-[20rem] lg:h-[24rem] object-cover object-top" />
+                <img src="/ide-light.png" alt="IDE" className="dark:hidden w-full opacity-60 rounded-t-lg sm:h-[16rem] md:h-[20rem] lg:h-[24rem] object-cover object-top" />
 
                 <div className="sm:container lg:max-w-[58rem] absolute z-20 -bottom-48 sm:-bottom-32 inset-x-0 mx-auto">
                     <MockPage />
@@ -51,18 +52,16 @@ export default function Tech() {
                 </div>
             </div>
 
-            <section className="pt-64 sm:pt-48 pb-16 bg-gray-100 dark:bg-dark drop-shadow-[0_-60px_35px_rgb(0_0_0_/_0.3)]">
+            <section className="pt-64 sm:pt-48 pb-16 bg-gray-100 dark:bg-dark drop-shadow-[0_-60px_35px_rgb(0_0_0_/_0.15)] dark:drop-shadow-[0_-60px_35px_rgb(0_0_0_/_0.3)]">
                 <div className="container">
                     <ol className="flex flex-col gap-12 pl-12 sm:pl-20 list-outside list-decimal marker:font-bold marker:text-4xl marker:text-grapefruit">
                         <Benefit name="Publicity">
-                            Seeking new users and publicity? SEC can help promote your app or idea on ___, ___.
+                            Seeking new users or general publicity? SEC can help promote your app or idea on Instagram,
+                            Schoology, and more.
                         </Benefit>
                         <Benefit name="Funding">
                             Maintenance and hosting fees and domain name costs can be too much for some developers. SEC
                             can help cover those costs so ___.
-                        </Benefit>
-                        <Benefit name="___">
-                            ___.
                         </Benefit>
                     </ol>
                 </div>
@@ -72,7 +71,7 @@ export default function Tech() {
                 <div className="flex flex-wrap sm:flex-nowrap gap-8 sm:gap-6 md:gap-14">
                     <div className="sm:w-52 sm:flex-none">
                         <h2 className="text-4xl font-bold mb-5">Eligibility Criteria</h2>
-                        <p>Before a project can be chartered, it must meet the following criteria for eligibility.</p>
+                        <p>Before a tech project can be chartered, it must meet the following criteria for eligibility.</p>
                     </div>
                     <ol className="flex flex-col gap-10 pl-10 list-outside list-decimal marker:font-bold marker:text-2xl marker:text-grapefruit">
                         <Requirement name="Open source">
