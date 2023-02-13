@@ -2,6 +2,7 @@ import {ReactNode} from 'react';
 import Head from 'next/head';
 import MockPage from '../components/MockPage';
 import Section from '../components/Section';
+import {Benefit} from '../components/Benefit';
 
 
 export default function Tech() {
@@ -51,12 +52,12 @@ export default function Tech() {
 
             <section className="pt-64 sm:pt-48 pb-16 bg-gray-100 dark:bg-dark drop-shadow-[0_-60px_35px_rgb(0_0_0_/_0.15)] dark:drop-shadow-[0_-60px_35px_rgb(0_0_0_/_0.3)]">
                 <div className="container">
-                    <ol className="flex flex-col gap-12 pl-12 sm:pl-20 list-outside list-decimal marker:font-bold marker:text-4xl marker:text-grapefruit">
-                        <Benefit name="Publicity">
+                    <ol className="flex flex-col gap-12">
+                        <Benefit name="Publicity" index={1}>
                             Seeking new users or general publicity? SEC can help promote your app or idea on Instagram,
                             Schoology, and more.
                         </Benefit>
-                        <Benefit name="Funding">
+                        <Benefit name="Funding" index={2}>
                             Maintenance and hosting fees and domain name costs can be too much for some developers. SEC
                             can help cover those costs so ___.
                         </Benefit>
@@ -66,7 +67,7 @@ export default function Tech() {
 
             <Section>
                 <div className="flex flex-wrap sm:flex-nowrap gap-8 sm:gap-6 md:gap-14">
-                    <div className="sm:w-52 sm:flex-none">
+                    <div className="sm:w-52 xl:w-[17.5rem] sm:flex-none">
                         <h2 className="text-4xl font-bold mb-5">Eligibility Criteria</h2>
                         <p>Before a tech project can be chartered, it must meet the following criteria for eligibility.</p>
                     </div>
@@ -101,23 +102,12 @@ export default function Tech() {
     )
 }
 
-function Benefit(props: {children: ReactNode, name: string}) {
-    return (
-        <li>
-            <div className="flex flex-col gap-3 pl-8">
-                <h3 className="text-4xl font-bold">{props.name}</h3>
-                <p>{props.children}</p>
-            </div>
-        </li>
-    )
-}
-
 function Requirement(props: {children: ReactNode, name: string}) {
     return (
         <li>
             <div className="flex flex-col gap-3 pl-8">
                 <h3 className="text-2xl font-bold">{props.name}</h3>
-                <p>{props.children}</p>
+                <p className="text-sm">{props.children}</p>
             </div>
         </li>
     )

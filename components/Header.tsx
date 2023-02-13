@@ -20,10 +20,8 @@ export default function Header() {
 
 function HeaderItem(props: {href: string, children: ReactNode}) {
     return (
-        <Link href={props.href}>
-            <a className="p-4">
-                {props.children}
-            </a>
+        <Link href={props.href} className="p-4">
+            {props.children}
         </Link>
     )
 }
