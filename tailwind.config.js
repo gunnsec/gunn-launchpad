@@ -12,7 +12,11 @@ module.exports = {
         dark: '#26252C',
         light: '#FFF8E8',
         grapefruit: '#FF6347',
-        pomegranate: '#E03C31'
+        pomegranate: '#E03C31',
+        secondary: {
+          DEFAULT: '#696969',
+          dark: 'rgb(249 250 251 / 0.54)'
+        },
       }
     },
     container: {
