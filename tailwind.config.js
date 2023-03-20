@@ -14,7 +14,7 @@ module.exports = {
         grapefruit: '#FF6347',
         pomegranate: '#E03C31',
         secondary: {
-          DEFAULT: '#696969',
+          DEFAULT: '#717471',
           dark: 'rgb(249 250 251 / 0.54)'
         },
       }
@@ -23,10 +23,10 @@ module.exports = {
       center: true,
       padding: {
         DEFAULT: '2rem',
-        sm: '3rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        sm: '4rem',
+        lg: '6rem',
+        xl: '12rem',
+        '2xl': '16rem',
       }
     }
   },

@@ -3,6 +3,8 @@ import Head from 'next/head';
 import MockPage from '../components/MockPage';
 import Section from '../components/Section';
 import {Benefit} from '../components/Benefit';
+import Resource from '../components/Resource';
+import Resources from '../components/Resources';
 
 
 export default function Tech() {
@@ -14,7 +16,7 @@ export default function Tech() {
             </Head>
 
             <section className="relative flex flex-col items-center -mb-5 z-10 px-4">
-                <h1 className="text-7xl font-bold mb-6 text-center">Tech Initiative 🚀</h1>
+                <h1 className="text-7xl font-bold mb-6 text-center">Tech Initiative</h1>
                 <button className="font-medium py-2 px-4 rounded bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 shadow-md shadow-red-700 text-white">
                     Register now
                 </button>
@@ -51,8 +53,8 @@ export default function Tech() {
             </div>
 
             <section className="pt-64 sm:pt-48 pb-16 bg-gray-100 dark:bg-dark drop-shadow-[0_-60px_35px_rgb(0_0_0_/_0.15)] dark:drop-shadow-[0_-60px_35px_rgb(0_0_0_/_0.3)]">
-                <div className="container flex flex-col gap-16">
-                    <ol className="flex flex-col gap-12">
+                <div className="container flex flex-col gap-14">
+                    <ol className="flex flex-col gap-10">
                         <Benefit name="Publicity" index={1}>
                             Seeking new users or general publicity? SEC can help promote your app or idea on Instagram,
                             Schoology, and more.
@@ -62,16 +64,37 @@ export default function Tech() {
                             can help cover those costs so ___.
                         </Benefit>
                     </ol>
+
+                    <Resources>
+                        <Resource name="Free hot chocolate">
+                            The SAC provides free hot chocolate on Mondays and Wednesdays. [...]
+                        </Resource>
+                        <Resource name="Free hot chocolate">
+                            The SAC provides free hot chocolate on Mondays and Wednesdays. [...]
+                        </Resource>
+                        <Resource name="Free hot chocolate">
+                            The SAC provides free hot chocolate on Mondays and Wednesdays. [...]
+                        </Resource>
+                        <Resource name="Free hot chocolate">
+                            The SAC provides free hot chocolate on Mondays and Wednesdays. [...]
+                        </Resource>
+                        <Resource name="Free hot chocolate">
+                            The SAC provides free hot chocolate on Mondays and Wednesdays. [...]
+                        </Resource>
+                        <Resource name="Free hot chocolate">
+                            The SAC provides free hot chocolate on Mondays and Wednesdays. [...]
+                        </Resource>
+                    </Resources>
                 </div>
             </section>
 
             <Section>
-                <div className="flex flex-wrap lg:flex-nowrap gap-8 lg:gap-14">
+                <div className="flex flex-wrap lg:flex-nowrap gap-8 lg:gap-16">
                     <div className="lg:w-52 xl:w-[17.5rem] lg:flex-none lg:text-right">
                         <h2 className="text-4xl font-bold mb-5">Eligibility Criteria</h2>
                         <p>Before a tech project can be chartered, it must meet the following criteria for eligibility.</p>
                     </div>
-                    <ol className="flex flex-col gap-10 lg:border-l lg:border-gray-400 pl-10 lg:pl-20 list-outside list-decimal marker:font-bold marker:text-xl marker:text-grapefruit">
+                    <ol className="flex flex-col gap-10 lg:border-l lg:border-secondary dark:lg:border-secondary-dark pl-10 lg:pl-20 list-outside list-decimal marker:font-bold marker:text-xl marker:text-grapefruit">
                         <Requirement name="Open source">
                             All chartered projects must have their source code available online for transparency and
                             accountability. We recommend using <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-grapefruit hover:underline">GitHub</a> to
