@@ -15,6 +15,7 @@ export default function Header() {
             <HeaderItem href="/art">Art</HeaderItem>
             <HeaderItem href="/tech">Tech</HeaderItem>
             <HeaderItem href="/events">Events</HeaderItem>
+            <HeaderItem href="/resources">Resources</HeaderItem>
             <ThemeToggle className="ml-auto mr-4" />
         </header>
     )
