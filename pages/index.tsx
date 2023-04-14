@@ -12,7 +12,7 @@ export default function Home() {
                 <meta name="description" content="___." />
             </Head>
 
-            <section className="text-center">
+            <section className="container text-center">
                 <h1 className="text-7xl font-bold mb-6 text-center">Gunn Launchpad</h1>
                 <p>___.</p>
             </section>
