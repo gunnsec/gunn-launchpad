@@ -9,7 +9,7 @@ export default function Header() {
     const scroll = useScroll();
 
     return (
-        <header className={'z-40 flex items-center px-6 lg:px-14 sticky top-0 mb-28 bg-white/60 dark:bg-midnight/60 transition-shadow duration-200 backdrop-blur ' + (scroll > 0 ? 'shadow-sm' : 'hover:shadow-md')}>
+        <header className={'z-40 flex items-center px-6 lg:px-14 sticky top-0 mb-28 bg-white/60 dark:bg-midnight/60 transition-shadow duration-200 backdrop-blur ' + (scroll > 0 ? 'shadow-sm' : 'hover:shadow-sm')}>
             {/* TODO: logo */}
             <HeaderItem href="/">Home</HeaderItem>
             <HeaderItem href="/art">Art</HeaderItem>
