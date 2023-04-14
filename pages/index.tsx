@@ -19,6 +19,12 @@ export default function Home() {
 
             <Section>
                 <div className="flex flex-wrap justify-center gap-6 mb-6">
+                    <Resource name="Club charter application" href="https://docs.google.com/forms/d/e/1FAIpQLSclwY3TNU4tkiHAStb9HZ-ZW83iOC-aibjyb0k-YTFNexsRIA/viewform">
+                        Charter application for a Spring 2023 club. Clubs already chartered in Fall do not need to recharter.
+                    </Resource>
+                    <Resource name="Club advisor availability list" href="https://drive.google.com/file/d/1dHt4OTTS_u_LSbocKiXHAIudg27hiA6-/view?usp=sharing">
+                        List of teachers potentially able to supervise a new club.
+                    </Resource>
                     <Resource name="Club event / fundraiser request form" href="https://docs.google.com/forms/d/e/1FAIpQLSfXaavKezsSY_i-OTcyE9mH9-XGrUYWzrYF6yo1_EgZwj5GXQ/viewform">
                         Request to host a school event or club fundraiser. Must be completed 2 weeks before the date
                         of the event.
@@ -32,7 +38,8 @@ export default function Home() {
                     </Resource>
                     <Resource name="SAC postermaking supplies">
                         Email <a href="mailto:lhall@pausd.org" className="text-grapefruit hover:underline">lhall@pausd.org</a>{' '}
-                        to request to use the SAC's paint markers and butcher paper for {/* ... */}posters.
+                        to request to use the SAC's paint markers and butcher paper for on-campus advertising. See Gunn's{' '}
+                        <a href="https://drive.google.com/file/d/1A0bsQgqN8bqXcI-dBvRc7BGtgcT8XFwm/view?usp=sharing" target="_blank" rel="noopener noreferrer"  className="text-grapefruit hover:underline">poster guidelines</a>.
                     </Resource>
                 </div>
             </Section>
