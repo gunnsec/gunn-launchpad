@@ -12,7 +12,7 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
-        <div className={inter.className}>
+        <div className={'h-full flex flex-col pt-44 ' + inter.className}>
             <Header />
             <Component {...pageProps} />
             <Footer />

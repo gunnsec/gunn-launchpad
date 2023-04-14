@@ -5,7 +5,7 @@ import {IoMdCloseCircle} from 'react-icons/io';
 
 export default function PageNotFound() {
     return (
-        <div className="h-screen fixed inset-0 flex items-center justify-center">
+        <div className="flex-grow flex items-center justify-center">
             <Head>
                 <title>404 | Gunn Launchpad</title>
                 <meta name="description" content="Page not found." />
