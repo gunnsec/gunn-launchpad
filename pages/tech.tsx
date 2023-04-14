@@ -5,6 +5,7 @@ import Section from '../components/Section';
 import {Benefit} from '../components/Benefit';
 import Resource from '../components/Resource';
 import Resources from '../components/Resources';
+import SectionHeader from '../components/SectionHeader';
 
 
 export default function Tech() {
@@ -89,32 +90,31 @@ export default function Tech() {
             </section>
 
             <Section>
-                <div className="flex flex-wrap lg:flex-nowrap gap-8 lg:gap-16">
-                    <div className="lg:w-52 xl:w-[17.5rem] lg:flex-none lg:text-right">
-                        <h2 className="text-4xl font-bold mb-5">Eligibility Criteria</h2>
-                        <p>Before a tech project can be chartered, it must meet the following criteria for eligibility.</p>
-                    </div>
-                    <ol className="flex flex-col gap-10 lg:border-l lg:border-secondary dark:lg:border-secondary-dark pl-10 lg:pl-20 list-outside list-decimal marker:font-bold marker:text-xl marker:text-grapefruit">
-                        <Requirement name="Open source">
-                            All chartered projects must have their source code available online for transparency and
-                            accountability. We recommend using <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-grapefruit hover:underline">GitHub</a> to
-                            host your code, but any online hosting / version control service works.
-                        </Requirement>
-                        <Requirement name="Gunn-made">
-                            All chartered projects must be made primarily by Gunn students. {/* vetting? */}
-                        </Requirement>
-                        <Requirement name="General use">
-                            All chartered projects must be applicable to the student body at large. To clarify, this rule
-                            does not enforce utilitarianism or discourage fun projects: games, ___, and ___ are totally
-                            allowed! Rather, this rule disallows projects specifically for a given club, team, or group;
-                            chartered projects must be usable by the whole school.
-                        </Requirement>
-                    </ol>
-                </div>
+                <SectionHeader id="criteria">Eligibility Criteria</SectionHeader>
+                <p className="mb-8">
+                    Before a tech project can be chartered, it must meet the following criteria for eligibility:
+                </p>
+
+                <ol className="flex flex-col gap-6 pl-10 list-outside list-decimal marker:font-bold marker:text-xl marker:text-grapefruit">
+                    <Requirement name="Open source">
+                        All chartered projects must have their source code available online for transparency and
+                        accountability. We recommend using <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-grapefruit hover:underline">GitHub</a> to
+                        host your code, but any online hosting / version control service works.
+                    </Requirement>
+                    <Requirement name="Gunn-made">
+                        All chartered projects must be made primarily by Gunn students. {/* vetting? */}
+                    </Requirement>
+                    <Requirement name="General use">
+                        All chartered projects must be applicable to the student body at large. To clarify, this rule
+                        does not enforce utilitarianism or discourage fun projects: games, ___, and ___ are totally
+                        allowed! Rather, this rule disallows projects specifically for a given club, team, or group;
+                        chartered projects must be usable by the whole school.
+                    </Requirement>
+                </ol>
             </Section>
 
-            <Section secondary>
-                <h2 className="text-4xl font-bold mb-5">Chartering</h2>
+            <Section>
+                <SectionHeader id="chartering">Chartering</SectionHeader>
                 ___.
             </Section>
 
@@ -128,8 +128,8 @@ export default function Tech() {
 function Requirement(props: {children: ReactNode, name: string}) {
     return (
         <li>
-            <div className="flex flex-col gap-2 pl-6">
-                <h3 className="text-xl font-bold">{props.name}</h3>
+            <div className="flex flex-col gap-1.5 pl-6">
+                <h3 className="text-lg font-bold">{props.name}</h3>
                 <p className="text-sm">{props.children}</p>
             </div>
         </li>
