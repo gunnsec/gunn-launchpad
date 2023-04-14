@@ -90,7 +90,7 @@ export default function Tech() {
             </section>
 
             <Section>
-                <SectionHeader id="criteria">Eligibility Criteria</SectionHeader>
+                <SectionHeader id="eligibility-criteria">Eligibility Criteria</SectionHeader>
                 <p className="mb-8">
                     Before a tech project can be chartered, it must meet the following criteria for eligibility:
                 </p>
@@ -119,6 +119,7 @@ export default function Tech() {
             </Section>
 
             <Section>
+                <SectionHeader id="featured-projects">Featured projects</SectionHeader>
                 ___.
             </Section>
         </main>

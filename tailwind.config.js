@@ -17,6 +17,10 @@ module.exports = {
           DEFAULT: '#717471',
           dark: 'rgb(249 250 251 / 0.54)'
         },
+        tertiary: {
+          DEFAULT: 'rgb(0 0 0 / 0.1)',
+          dark: 'rgb(255 255 255 / 0.1)'
+        }
       }
     },
     container: {
