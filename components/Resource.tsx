@@ -57,6 +57,13 @@ export const events = [
 ]
 
 export const publicity = [
+    <Resource name="Schoology updates">
+        Email <a href="mailto:lhall@pausd.org" className="text-grapefruit hover:underline">lhall@pausd.org</a>{' '}
+        to request a blurb on Schoology in the Student Activities Weekly Update.
+    </Resource>,
+    <Resource name="Gunn SEC Instagram">
+        [...] {/* TODO */}
+    </Resource>,
     <Resource name="SAC postermaking supplies">
         Email <a href="mailto:lhall@pausd.org" className="text-grapefruit hover:underline">lhall@pausd.org</a>{' '}
         to request to use the SAC's paint markers and butcher paper for on-campus advertising. See Gunn's{' '}

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Section from '../components/Section';
 import SectionHeader from '../components/SectionHeader';
 import {chartering, events, publicity} from '../components/Resource';
+import {ReactNode} from 'react';
 
 
 export default function Home() {
@@ -19,31 +20,40 @@ export default function Home() {
 
             <Section>
                 <SectionHeader id="club-chartering">Club chartering</SectionHeader>
-                <div className="grid grid-cols-2 gap-6">
+                <Resources>
                     {chartering}
-                </div>
+                </Resources>
             </Section>
 
             <Section>
                 <SectionHeader id="club-events-fundraisers">Club events and fundraisers</SectionHeader>
-                <div className="grid grid-cols-2 gap-6">
+                <Resources>
                     {events}
-                </div>
+                </Resources>
             </Section>
 
             <Section>
                 <SectionHeader id="publicity">Publicity</SectionHeader>
-                <div className="grid grid-cols-2 gap-6">
+                <Resources>
                     {publicity}
-                </div>
+                </Resources>
             </Section>
 
             <Section>
                 <SectionHeader id="funding">Funding</SectionHeader>
-                <div className="grid grid-cols-2 gap-6">
+                <Resources>
                     {/* TODO */}
-                </div>
+                </Resources>
             </Section>
         </main>
+    )
+}
+
+// TODO: naming
+function Resources(props: {children: ReactNode}) {
+    return (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {props.children}
+        </div>
     )
 }
