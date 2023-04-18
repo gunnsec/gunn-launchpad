@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Section from '../components/Section';
-import SectionHeader from '../components/SectionHeader';
 import {chartering, events, publicity} from '../components/Resource';
 
 
@@ -26,8 +25,7 @@ export default function Home() {
                 </div>
             </Section>
 
-            <Section>
-                <SectionHeader id="motivation">Motivation</SectionHeader>
+            <Section name="Motivation" id="motivation">
                 <p>___.</p>
             </Section>
 

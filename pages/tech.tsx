@@ -5,7 +5,6 @@ import Section from '../components/Section';
 import {Benefit} from '../components/Benefit';
 import Resource from '../components/Resource';
 import Resources from '../components/Resources';
-import SectionHeader from '../components/SectionHeader';
 
 
 export default function Tech() {
@@ -89,8 +88,7 @@ export default function Tech() {
                 </div>
             </section>
 
-            <Section>
-                <SectionHeader id="eligibility-criteria">Eligibility Criteria</SectionHeader>
+            <Section name="Eligibility Criteria" id="eligibility-criteria">
                 <p className="mb-8">
                     Before a tech project can be chartered, it must meet the following criteria for eligibility:
                 </p>
@@ -106,20 +104,18 @@ export default function Tech() {
                     </Requirement>
                     <Requirement name="General use">
                         All chartered projects must be applicable to the student body at large. To clarify, this rule
-                        does not enforce utilitarianism or discourage fun projects: games, ___, and ___ are totally
-                        allowed! Rather, this rule disallows projects specifically for a given club, team, or group;
-                        chartered projects must be usable by the whole school.
+                        does not enforce utilitarianism: games and other fun projects are totally allowed! Rather, this
+                        rule disallows projects specifically for a given club, team, or group; chartered projects must
+                        be usable by the whole student population.
                     </Requirement>
                 </ol>
             </Section>
 
-            <Section>
-                <SectionHeader id="chartering">Chartering</SectionHeader>
+            <Section name="Chartering" id="chartering">
                 ___.
             </Section>
 
-            <Section>
-                <SectionHeader id="featured-projects">Featured projects</SectionHeader>
+            <Section name="Featured projects" id="featured-projects">
                 ___.
             </Section>
         </main>
