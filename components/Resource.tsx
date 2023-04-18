@@ -61,8 +61,9 @@ export const publicity = [
         Email <a href="mailto:lhall@pausd.org" className="text-grapefruit hover:underline">lhall@pausd.org</a>{' '}
         to request a blurb on Schoology in the Student Activities Weekly Update.
     </Resource>,
-    <Resource name="Gunn SEC Instagram">
-        [...] {/* TODO */}
+    <Resource name="Gunn Publicity Form" href="https://docs.google.com/forms/d/e/1FAIpQLSfmty9G6y5DA3dZlFAqFavDgDOXgVti_0ljvug3Z7p8kbtp3g/viewform?usp=send_form">
+        Get a club event graphic and caption posted to the <code>@gunntitans</code> Instagram, Schoology, and SEC
+        Updates page on Facebook.
     </Resource>,
     <Resource name="SAC postermaking supplies">
         Email <a href="mailto:lhall@pausd.org" className="text-grapefruit hover:underline">lhall@pausd.org</a>{' '}

@@ -12,7 +12,7 @@ export default function Tech() {
         <main>
             <Head>
                 <title>Tech Initiative | Gunn Launchpad</title>
-                <meta name="description" content="___." />
+                <meta name="description" content="A proposed collaboration between SEC and student makers." />
             </Head>
 
             {/* TODO: static mb-28 is a bit hacky with changing mock-page height based on text wrapping */}
