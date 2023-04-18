@@ -2,8 +2,8 @@ import {ReactNode} from 'react';
 import Head from 'next/head';
 import MockPage from '../components/MockPage';
 import Section from '../components/Section';
-import {Benefit} from '../components/Benefit';
-import Resource from '../components/Resource';
+import Benefit from '../components/Benefit';
+import {publicity} from '../components/Resource';
 import Resources from '../components/Resources';
 
 
@@ -15,16 +15,21 @@ export default function Tech() {
                 <meta name="description" content="___." />
             </Head>
 
-            <section className="relative flex flex-col items-center -mb-5 z-10 px-4">
+            {/* TODO: static mb-28 is a bit hacky with changing mock-page height based on text wrapping */}
+            <section className="relative flex flex-col items-center z-10 px-4 mb-28 sm:mb-0">
                 <h1 className="text-7xl font-bold mb-6 text-center">Tech Initiative</h1>
+                {/*
                 <button className="font-medium py-2 px-4 rounded bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 shadow-md shadow-red-700 text-white">
                     Register now
                 </button>
+                */}
             </section>
 
             <div className="relative mx-auto max-w-[90%] xl:container">
-                <img src="/ide-dark.png" alt="IDE" className="hidden dark:block w-full opacity-60 rounded-t-lg sm:h-[16rem] md:h-[20rem] lg:h-[24rem] object-cover object-top" />
-                <img src="/ide-light.png" alt="IDE" className="dark:hidden w-full opacity-60 rounded-t-lg sm:h-[16rem] md:h-[20rem] lg:h-[24rem] object-cover object-top" />
+                <div className="hidden sm:block">
+                    <img src="/ide-dark.png" alt="IDE" className="hidden dark:block w-full opacity-60 rounded-t-lg sm:h-[16rem] md:h-[20rem] lg:h-[24rem] object-cover object-top" />
+                    <img src="/ide-light.png" alt="IDE" className="dark:hidden block w-full opacity-60 rounded-t-lg sm:h-[16rem] md:h-[20rem] lg:h-[24rem] object-cover object-top" />
+                </div>
 
                 <div className="sm:container lg:max-w-[58rem] absolute z-20 -bottom-48 sm:-bottom-32 inset-x-0 mx-auto">
                     <MockPage />
@@ -38,13 +43,14 @@ export default function Tech() {
                         <div className="flex flex-col gap-3 py-3 px-4 font-light">
                             <div className="h-20 bg-gray-300/40 dark:bg-gray-300/10 rounded-lg animate-pulse" />
                             <p>
-                                Tech Initiative is a collaboration between SEC and student programmers, creators, and
-                                innovators.
+                                Tech Initiative is a proposed collaboration between SEC and student programmers, creators,
+                                and innovators.
                             </p>
                             <p>
-                                Through this partnership, ___.
+                                Through this partnership, we hope to foster student creativity and encourage student-made
+                                projects that benefit everyone.
                             </p>
-                            <p className="mb-2">See our currently chartered projects <a>here</a>.</p>
+                            {/* <p className="mb-2">See our currently chartered projects <a>here</a>.</p> */}
                         </div>
                     </div>
 
@@ -52,7 +58,7 @@ export default function Tech() {
                 </div>
             </div>
 
-            <section className="pt-64 sm:pt-48 pb-16 bg-gray-100 dark:bg-dark drop-shadow-[0_-60px_35px_rgb(0_0_0_/_0.15)] dark:drop-shadow-[0_-60px_35px_rgb(0_0_0_/_0.3)]">
+            <section className="pt-64 sm:pt-48 pb-16 bg-gray-100 dark:bg-dark drop-shadow-[0_-60px_35px_rgb(0_0_0_/_0.15)] dark:drop-shadow-[0_-60px_35px_rgb(0_0_0_/_0.3)] mb-8">
                 <div className="container flex flex-col gap-14">
                     <ol className="flex flex-col gap-10">
                         <Benefit name="Publicity" index={1}>
@@ -61,36 +67,25 @@ export default function Tech() {
                         </Benefit>
                         <Benefit name="Funding" index={2}>
                             Maintenance, hosting fees, and domain name costs can be too much for some developers. SEC
-                            can help cover those costs so ___.
+                            can offer grants to cover those costs so financial concerns{/* TODO: wording */} won't stand
+                            in the way of your dream.{/* TODO: more wording */}
+                        </Benefit>
+                        <Benefit name="Domain" index={3}>
+                            For web projects, SEC can provide a free subdomain on <code>gunnhigh.school</code> or{' '}
+                            <code>gunn.one</code> to host your project.
                         </Benefit>
                     </ol>
 
                     <Resources>
-                        <Resource name="Free hot chocolate">
-                            The SAC provides free hot chocolate on Mondays and Wednesdays. [...]
-                        </Resource>
-                        <Resource name="Free hot chocolate">
-                            The SAC provides free hot chocolate on Mondays and Wednesdays. [...]
-                        </Resource>
-                        <Resource name="Free hot chocolate">
-                            The SAC provides free hot chocolate on Mondays and Wednesdays. [...]
-                        </Resource>
-                        <Resource name="Free hot chocolate">
-                            The SAC provides free hot chocolate on Mondays and Wednesdays. [...]
-                        </Resource>
-                        <Resource name="Free hot chocolate">
-                            The SAC provides free hot chocolate on Mondays and Wednesdays. [...]
-                        </Resource>
-                        <Resource name="Free hot chocolate">
-                            The SAC provides free hot chocolate on Mondays and Wednesdays. [...]
-                        </Resource>
+                        {publicity}
                     </Resources>
                 </div>
             </section>
 
             <Section name="Eligibility Criteria" id="eligibility-criteria">
                 <p className="mb-8">
-                    Before a tech project can be chartered, it must meet the following criteria for eligibility:
+                    Before a tech project can be chartered (and on top of the conditions listed on the home page), it must
+                    meet the following criteria for eligibility:
                 </p>
 
                 <ol className="flex flex-col gap-6 pl-10 list-outside list-decimal marker:font-bold marker:text-xl marker:text-grapefruit">
@@ -112,12 +107,17 @@ export default function Tech() {
             </Section>
 
             <Section name="Chartering" id="chartering">
-                ___.
+                The official charter application is currently a work-in-progress to be implemented by next year's Student
+                Executive Council. Email <a href="mailto:kevinyu567@gmail.com" className="text-grapefruit hover:underline">kevinyu567@gmail.com</a>{' '}
+                if you're interested in pre-registering your project as a pilot for the program, and check back next year
+                for more details!
             </Section>
 
+            {/*
             <Section name="Featured projects" id="featured-projects">
                 ___.
             </Section>
+            */}
         </main>
     )
 }

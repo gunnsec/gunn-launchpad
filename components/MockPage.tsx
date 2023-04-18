@@ -7,12 +7,12 @@ export default function MockPage(props: {right?: boolean}) {
                 <div className="w-2 h-2 rounded-full bg-lime-500" />
             </div>
             <div className="flex flex-col gap-4 p-3">
-                <div className="h-20 bg-gray-300/40 dark:bg-gray-300/10 rounded-lg animate-pulse" />
+                <div className="h-20 bg-gray-300/40 dark:bg-gray-300/10 rounded-lg animate-pulse mb-1" />
                 <div className="flex flex-col gap-2">
                     <FillerText />
                     <FillerText width={60} />
                 </div>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 mb-2">
                     <FillerText />
                     <FillerText width={60} />
                 </div>
