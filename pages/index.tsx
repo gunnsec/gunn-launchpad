@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Section from '../components/Section';
 import { BsChevronDown } from 'react-icons/bs';
 import { ReactNode } from 'react';
-import { events, fundraising } from '../components/Resource';
+import { events, fundraising, publicity } from '../components/Resource';
 
 
 export default function Home() {
@@ -36,10 +36,10 @@ export default function Home() {
                 </Banner>
                 <Banner num={2} name="Fundraising & Materials" description="Get what you need to make your idea a reality.">
                     {[fundraising.ptsa, fundraising.stfparking,
-                    events.event_form, events.facilities, events.sound]}
+                    events.facilities, events.sound]}
                 </Banner>
                 <Banner num={3} name="Publicize" description="Get word out there!">
-                    we have these i swear
+                    {[publicity.publicity, publicity.poster_supplies, publicity.schoology]}
                 </Banner>
                 <Banner num={4} name="To the moon!" description="See your dream lift off!">
                     examples of this working here.
