@@ -45,10 +45,10 @@ export default function Home() {
 }
 
 // TODO: naming
-function Resources(props: {children: ReactNode}) {
+function Resources(props: {children: object|ReactNode}) {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {props.children}
+            {typeof props.children == 'object' ? Object.values(props.children) : props.children}
         </div>
     )
 }
