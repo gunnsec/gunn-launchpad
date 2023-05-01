@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Section from '../components/Section';
-import {chartering, events, publicity} from '../components/Resource';
+import {chartering, events, publicity, fundraising} from '../components/Resource';
 import {ReactNode} from 'react';
 
 
@@ -17,15 +17,9 @@ export default function Home() {
                 <p>___.</p>
             </section>
 
-            <Section name="Club chartering" id="club-chartering">
+            <Section name="Fundraising" id="fundraising">
                 <Resources>
-                    {chartering}
-                </Resources>
-            </Section>
-
-            <Section name="Club events and fundraisers" id="club-events-fundraisers">
-                <Resources>
-                    {events}
+                    {fundraising}
                 </Resources>
             </Section>
 
@@ -35,9 +29,15 @@ export default function Home() {
                 </Resources>
             </Section>
 
-            <Section name="Funding" id="funding">
+            <Section name="Club chartering" id="club-chartering">
                 <Resources>
-                    {/* TODO */}
+                    {chartering}
+                </Resources>
+            </Section>
+
+            <Section name="Club events and fundraisers" id="club-events-fundraisers">
+                <Resources>
+                    {events}
                 </Resources>
             </Section>
         </main>

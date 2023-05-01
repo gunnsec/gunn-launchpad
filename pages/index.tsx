@@ -1,7 +1,8 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Section from '../components/Section';
-import { BsChevronCompactDown, BsChevronDown } from 'react-icons/bs';
+import { BsChevronDown } from 'react-icons/bs';
+import { ReactNode } from 'react';
+import { events, fundraising } from '../components/Resource';
 
 
 export default function Home() {
@@ -30,18 +31,40 @@ export default function Home() {
 
             {/* TODO: do something about this resources-preview section? does it belong here? */}
             <Section>
-                <div className="flex flex-wrap justify-center gap-6 mb-6">
-                </div>
-                <Link href="/resources" className="block text-center text-secondary dark:text-secondary-dark hover:underline">
-                    View all SEC resources here →
-                </Link>
+                <Banner num={1} name="Planning Support" description="Run your idea by SEC to get feedback and help with logistics.">
+                    COMING SOON LOL!
+                </Banner>
+                <Banner num={2} name="Fundraising & Materials" description="Get what you need to make your idea a reality.">
+                    {[fundraising.ptsa, fundraising.stfparking,
+                    events.event_form, events.facilities, events.sound]}
+                </Banner>
+                <Banner num={3} name="Publicize" description="Get word out there!">
+                    we have these i swear
+                </Banner>
+                <Banner num={4} name="To the moon!" description="See your dream lift off!">
+                    examples of this working here.
+                </Banner>
             </Section>
 
-            <Section name="Motivation" id="motivation">
+            {/* <Section name="Motivation" id="motivation">
                 <p>___.</p>
-            </Section>
+            </Section> */}
 
             {/* ... */}
         </main>
+    )
+}
+
+
+function Banner(props: { num: number, name: string, description: string, children: ReactNode }) {
+    return (
+        <div>
+            <h1>{props.num}</h1>
+            <h2>{props.name}</h2>
+            <p>{props.description}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
+                {props.children}
+            </div>
+        </div>
     )
 }
