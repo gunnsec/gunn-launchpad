@@ -30,7 +30,7 @@ export default function Home() {
             </section>
 
             {/* TODO: do something about this resources-preview section? does it belong here? */}
-            <Section>
+            <Section className="mt-[-9em]">
                 <Banner num={1} name="Planning Support" description="Run your idea by SEC to get feedback and help with logistics.">
                     COMING SOON LOL!
                 </Banner>
@@ -58,9 +58,9 @@ export default function Home() {
 
 function Banner(props: { num: number, name: string, description: string, children: ReactNode }) {
     return (
-        <div>
-            <h1>{props.num}</h1>
-            <h2>{props.name}</h2>
+        <div className="relative flex flex-col gap-3 py-8 pl-16 sm:pl-20">
+            <h1 className="absolute left-0 flex items-center justify-center w-10 h-10 bg-grapefruit rounded-full text-3xl font-black text-gray-100 dark:text-dark">{props.num}</h1>
+            <h3 className="text-3xl font-bold">{props.name}</h3>
             <p>{props.description}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
                 {props.children}
