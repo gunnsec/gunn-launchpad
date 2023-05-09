@@ -15,7 +15,7 @@ export default function Resource(props: { name: string, children: ReactNode, hre
             </h5>
             <p className="text-secondary dark:text-secondary-dark text-sm">{props.children}</p>
             {props.clubOnly && (
-                <p className="text-sm pt-1 text-grapefruit">* for chartered Gunn clubs only.</p>
+                <p className="text-xs pt-1 text-grapefruit">* for chartered Gunn clubs only.</p>
             )}
         </div>
     )
@@ -34,7 +34,7 @@ export const chartering = {
 
 export const events = {
     "event_form":
-        <Resource name="Club event / fundraiser request form" href="https://docs.google.com/forms/d/e/1FAIpQLSfXaavKezsSY_i-OTcyE9mH9-XGrUYWzrYF6yo1_EgZwj5GXQ/viewform" clubOnly={true}>
+        <Resource name="Club event / fundraiser request form" href="https://docs.google.com/forms/d/e/1FAIpQLSfXaavKezsSY_i-OTcyE9mH9-XGrUYWzrYF6yo1_EgZwj5GXQ/viewform" clubOnly>
             Request to host a school event or club fundraiser. Must be completed 2 weeks before the date
             of the event.
         </Resource>,
@@ -43,21 +43,21 @@ export const events = {
             Request facility (tables, chairs, bleachers) or tech setup for an event hosted at a Gunn venue.
         </Resource>,
     "reimbursement":
-        <Resource name="Reimbursement request form" href="https://www.gunnsec.org/uploads/1/2/3/2/123265564/reimbursement_request.pdf" clubOnly={true}>
+        <Resource name="Reimbursement request form" href="https://www.gunnsec.org/uploads/1/2/3/2/123265564/reimbursement_request.pdf" clubOnly>
             Reimburse club purchases made by individuals with funds from the club account. Print, fill out, and submit to the
             SAO no later than one month after the purchase was made.
         </Resource>,
     "purchases":
-        <Resource name="Purchase request form" href="https://www.gunnsec.org/uploads/1/2/3/2/123265564/purchase_request_form.pdf" clubOnly={true}>
+        <Resource name="Purchase request form" href="https://www.gunnsec.org/uploads/1/2/3/2/123265564/purchase_request_form.pdf" clubOnly>
             Request to purchase item(s) using club funds. Club minutes where the purchase was approved need to be attached to
             the form. Print, fill out, and submit to the SAO two weeks prior to the purchase date.
         </Resource>,
     "cashbox":
-        <Resource name="Cash box request form" href="https://www.gunnsec.org/uploads/1/2/3/2/123265564/cash_box_request_1.pdf" clubOnly={true}>
+        <Resource name="Cash box request form" href="https://www.gunnsec.org/uploads/1/2/3/2/123265564/cash_box_request_1.pdf" clubOnly>
             Request a cash box for a club fundraiser. Print, fill out, and submit to the SAO two days prior to pick-up.
         </Resource>,
     "webstore":
-        <Resource name="Titan webstore" clubOnly={true}>
+        <Resource name="Titan webstore" clubOnly>
             For non-physical fundraisers{/* TODO: reword */}, email <a href="mailto:lhall@pausd.org" className="text-grapefruit hover:underline">lhall@pausd.org</a>{' '}
             to request the fundraiser item be added to the Titan Webstore.
         </Resource>,
@@ -74,7 +74,7 @@ export const fundraising = {
             The Gunn PTSA offers grants for student projects every year. Apply for some funding!
         </Resource>,
     "stfparking":
-        <Resource name="Stanford Parking" clubOnly={true}>
+        <Resource name="Stanford Parking" clubOnly>
             Volunteer to direct traffic at PALY's parking lot during a Stanford game to earn money for your club.
         </Resource>
 }

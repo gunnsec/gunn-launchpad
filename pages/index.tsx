@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Section from '../components/Section';
-import { BsChevronDown } from 'react-icons/bs';
+import { BsChevronCompactDown } from 'react-icons/bs';
 import { ReactNode } from 'react';
 import { events, fundraising, publicity } from '../components/Resource';
 
@@ -25,7 +25,7 @@ export default function Home() {
                     </p>
                 </div>
                 <a className="text-3xl absolute bottom-0 w-full pb-16">
-                    <BsChevronDown className="m-auto animate-bounce" />
+                    <BsChevronCompactDown className="m-auto animate-bounce" />
                 </a>
             </section>
 

@@ -19,25 +19,25 @@ export default function Home() {
 
             <Section name="Fundraising" id="fundraising">
                 <Resources>
-                    {fundraising}
+                    {Object.values(fundraising)}
                 </Resources>
             </Section>
 
             <Section name="Publicity" id="publicity">
                 <Resources>
-                    {publicity}
+                    {Object.values(publicity)}
                 </Resources>
             </Section>
 
             <Section name="Club chartering" id="club-chartering">
                 <Resources>
-                    {chartering}
+                    {Object.values(chartering)}
                 </Resources>
             </Section>
 
             <Section name="Club events and fundraisers" id="club-events-fundraisers">
                 <Resources>
-                    {events}
+                    {Object.values(events)}
                 </Resources>
             </Section>
         </main>
@@ -45,10 +45,10 @@ export default function Home() {
 }
 
 // TODO: naming
-function Resources(props: {children: object|ReactNode}) {
+function Resources(props: {children: ReactNode}) {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {typeof props.children == 'object' ? Object.values(props.children) : props.children}
+            {props.children}
         </div>
     )
 }
