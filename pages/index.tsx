@@ -13,24 +13,19 @@ export default function Home() {
                 <meta name="description" content="An SEC initiative to launch events, apps and initiatives into reality." />
             </Head>
 
-            <section className="text-center h-screen relative top-[-11rem] flex ">
-                <div className="absolute opacity-30 left-0 top-0 -z-10 h-full w-full">
-                    <img src="/launch_light.jpg" className="dark:hidden h-full w-full object-cover"/>
-                    <img src="/launch_dark.jpg" className="hidden dark:block h-full w-full object-cover" />
-                </div>
-                <div className="m-auto">
-                    <h1 className="text-7xl font-bold mb-6">Gunn Launchpad</h1>
+            <section className="text-center h-screen relative flex after:absolute after:inset-0 after:bg-[url('/launch_light.webp')] after:dark:bg-[url('/launch_dark.webp')] after:bg-cover after:bg-center after:bg-fixed after:opacity-40 after:-z-10 mt-[-11rem]">
+                <div className="m-auto px-4">
+                    <h1 className="text-5xl sm:text-7xl font-bold mb-6">Gunn Launchpad</h1>
                     <p>
                         Launch your ideas, events, or apps into reality with the help of Gunn SEC.
                     </p>
                 </div>
-                <a className="text-3xl absolute bottom-0 w-full pb-16">
+                <a className="text-3xl absolute bottom-0 w-full pb-16" href="#benefits">
                     <BsChevronCompactDown className="m-auto animate-bounce" />
                 </a>
             </section>
 
-            {/* TODO: do something about this resources-preview section? does it belong here? */}
-            <Section className="mt-[-9em]">
+            <Section id="benefits">
                 <Banner num={1} name="Planning Support" description="Run your idea by SEC to get feedback and help with logistics.">
                     COMING SOON LOL!
                 </Banner>
@@ -46,9 +41,11 @@ export default function Home() {
                 </Banner>
             </Section>
 
-            {/* <Section name="Motivation" id="motivation">
+            {/*
+            <Section name="Motivation" id="motivation">
                 <p>___.</p>
-            </Section> */}
+            </Section>
+            */}
 
             {/* ... */}
         </main>

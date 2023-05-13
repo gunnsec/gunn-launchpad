@@ -4,7 +4,7 @@ import Document, {Html, Head, Main, NextScript} from 'next/document';
 class LaunchpadDocument extends Document {
     render() {
         return (
-            <Html lang="en" className="h-full">
+            <Html lang="en" className="h-full scroll-smooth">
                 <Head>
                     <meta charSet="utf-8" />
                     <link rel="icon" href="/favicon.ico" />
