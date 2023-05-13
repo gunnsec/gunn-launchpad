@@ -27,17 +27,16 @@ export default function Home() {
 
             <Section id="benefits">
                 <Banner num={1} name="Planning Support" description="Run your idea by SEC to get feedback and help with logistics.">
-                    COMING SOON LOL!
+                    {/* TODO: coming soon? */}
                 </Banner>
                 <Banner num={2} name="Fundraising & Materials" description="Get what you need to make your idea a reality.">
-                    {[fundraising.ptsa, fundraising.stfparking,
-                    events.facilities, events.sound]}
+                    {[fundraising.ptsa, fundraising.stfparking, events.facilities, events.sound]}
                 </Banner>
-                <Banner num={3} name="Publicize" description="Get word out there!">
+                <Banner num={3} name="Publicize" description="Get the word out about your event!">
                     {[publicity.publicity, publicity.poster_supplies, publicity.schoology]}
                 </Banner>
                 <Banner num={4} name="To the moon!" description="See your dream lift off!">
-                    examples of this working here.
+                    {/* TODO: examples of this working here */}
                 </Banner>
             </Section>
 
@@ -46,18 +45,17 @@ export default function Home() {
                 <p>___.</p>
             </Section>
             */}
-
-            {/* ... */}
         </main>
     )
 }
 
-
 function Banner(props: { num: number, name: string, description: string, children: ReactNode }) {
     return (
         <div className="relative flex flex-col gap-3 py-8 pl-16 sm:pl-20">
-            <h1 className="absolute left-0 flex items-center justify-center w-10 h-10 bg-grapefruit rounded-full text-3xl font-black text-gray-100 dark:text-dark">{props.num}</h1>
-            <h3 className="text-3xl font-bold">{props.name}</h3>
+            <h1 className="absolute left-0 flex items-center justify-center w-10 h-10 bg-grapefruit rounded-full text-3xl font-black text-gray-100 dark:text-dark">
+                {props.num}
+            </h1>
+            <h3 className="text-2xl pt-1 font-bold">{props.name}</h3>
             <p>{props.description}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
                 {props.children}
