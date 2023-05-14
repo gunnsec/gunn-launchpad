@@ -4,7 +4,8 @@ import { RxExternalLink } from 'react-icons/rx';
 
 export default function Resource(props: { name: string, children: ReactNode, href?: string, clubOnly?: boolean }) {
     return (
-        <div className="basis-96 flex-grow relative px-5 py-3.5 rounded-lg border border-gray-400 hover:border-gray-600 dark:border-gray-500 dark:hover:border-gray-400 transition-[border] duration-200">
+        <div className="basis-96 flex-grow relative px-5 py-3.5 rounded-lg border border-gray-400 hover:border-gray-600 dark:border-gray-500 dark:hover:border-gray-400 transition-[border] duration-200"
+            key={props.name}>
             {props.href && (
                 <a href={props.href} target="_blank" rel="noopener noreferrer" className="absolute inset-0" />
             )}
