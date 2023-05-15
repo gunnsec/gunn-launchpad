@@ -77,7 +77,7 @@ export default function Tech() {
                     </ol>
 
                     <Resources>
-                        {publicity}
+                        {Object.values(publicity)}
                     </Resources>
                 </div>
             </section>
