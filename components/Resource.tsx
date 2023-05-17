@@ -77,6 +77,10 @@ export const fundraising = {
     "stfparking":
         <Resource name="Stanford Parking" clubOnly>
             Volunteer to direct traffic at PALY's parking lot during a Stanford game to earn money for your club.
+        </Resource>,
+    "thinkfund":
+        <Resource name="Palo Alto Think Fund" href="https://www.mitchellparkteenservices.org/thinkfund">
+            The think fund, run by the City of Palo Alto, offers grants to teens creating new programs, activities, and/or events.
         </Resource>
 }
 
@@ -96,5 +100,12 @@ export const publicity = {
             Email <a href="mailto:lhall@pausd.org" className="text-grapefruit hover:underline">lhall@pausd.org</a>{' '}
             to request to use the SAC's paint markers and butcher paper for on-campus advertising. See Gunn's{' '}
             <a href="https://drive.google.com/file/d/1A0bsQgqN8bqXcI-dBvRc7BGtgcT8XFwm/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-grapefruit hover:underline">poster guidelines</a>.
+        </Resource>
+}
+
+export const sec = {
+    "partnership":
+        <Resource name="SEC Event or Initiative Partnership" href="https://forms.gle/gEGzBTeDkfJ8DAjc7">
+            Pitch your idea to SEC and get a SEC member (or two) to help bring your idea to life!
         </Resource>
 }

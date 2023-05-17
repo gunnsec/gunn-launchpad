@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Section from '../components/Section';
-import {chartering, events, publicity, fundraising} from '../components/Resource';
+import {chartering, events, publicity, fundraising, sec} from '../components/Resource';
 import {ReactNode} from 'react';
 
 
@@ -14,7 +14,13 @@ export default function Home() {
 
             <section className="container mb-12">
                 <h1 className="text-4xl font-bold mb-6">All resources</h1>
-                <p>___.</p>
+                <p>A (non-exhaustive) collection of resources to help lift your project off the ground! 
+                    With entries from Gunn SEC, PTSA, the City of Palo Alto, and potentially beyond. 
+                    <br />
+                    <br />
+                    Check out <a href="https://gunnsec.org/" target="_blank" rel="noopener noreferrer">gunnsec.org</a>{' '}
+                    for a more exhaustive list of resources from SEC. Reach out and let us know about additional resources!
+                </p>
             </section>
 
             <Section name="Fundraising" id="fundraising">
@@ -26,6 +32,12 @@ export default function Home() {
             <Section name="Publicity" id="publicity">
                 <Resources>
                     {Object.values(publicity)}
+                </Resources>
+            </Section>
+
+            <Section name="Direct from SEC" id="sec">
+                <Resources>
+                    {Object.values(sec)}
                 </Resources>
             </Section>
 
