@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Section from '../components/Section';
 import { BsChevronCompactDown } from 'react-icons/bs';
 import { ReactNode } from 'react';
-import { events, fundraising, publicity } from '../components/Resource';
+import {events, fundraising, publicity, sec} from '../components/Resource';
 
 
 export default function Home() {
@@ -27,7 +27,8 @@ export default function Home() {
 
             <Section id="benefits">
                 <Banner num={1} name="Planning Support" description="Run your idea by SEC to get feedback and help with logistics.">
-                    {/* TODO: coming soon? */}
+                    {/* TODO: make this fancier? */}
+                    {[sec.partnership]}
                 </Banner>
                 <Banner num={2} name="Fundraising & Materials" description="Get what you need to make your idea a reality.">
                     {[fundraising.ptsa, fundraising.stfparking, events.facilities, events.sound]}

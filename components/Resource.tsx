@@ -4,8 +4,7 @@ import { RxExternalLink } from 'react-icons/rx';
 
 export default function Resource(props: { name: string, children: ReactNode, href?: string, clubOnly?: boolean }) {
     return (
-        <div className="basis-96 flex-grow relative px-5 py-3.5 rounded-lg border border-gray-400 hover:border-gray-600 dark:border-gray-500 dark:hover:border-gray-400 transition-[border] duration-200"
-            key={props.name}>
+        <div className="basis-96 flex-grow relative px-5 py-3.5 rounded-lg border border-gray-400 hover:border-gray-600 dark:border-gray-500 dark:hover:border-gray-400 transition-[border] duration-200" key={props.name}>
             {props.href && (
                 <a href={props.href} target="_blank" rel="noopener noreferrer" className="absolute inset-0" />
             )}
@@ -16,7 +15,7 @@ export default function Resource(props: { name: string, children: ReactNode, hre
             </h5>
             <p className="text-secondary dark:text-secondary-dark text-sm">{props.children}</p>
             {props.clubOnly && (
-                <p className="text-xs pt-1 text-grapefruit">* for chartered Gunn clubs only.</p>
+                <p className="text-xs pt-1.5 text-grapefruit italic">* for chartered Gunn clubs only.</p>
             )}
         </div>
     )
@@ -107,5 +106,10 @@ export const sec = {
     "partnership":
         <Resource name="SEC Event or Initiative Partnership" href="https://forms.gle/gEGzBTeDkfJ8DAjc7">
             Pitch your idea to SEC and get a SEC member (or two) to help bring your idea to life!
+        </Resource>,
+    "domain":
+        <Resource name="Free subdomains">
+            Chartered tech (and other SEC-affiliated) projects can request free subdomains on <code>gunn.one</code> or{' '}
+            <code>gunnhigh.school</code> to host their websites.
         </Resource>
 }

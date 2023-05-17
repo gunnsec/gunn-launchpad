@@ -65,12 +65,14 @@ export default function Tech() {
                             Seeking new users or general publicity? SEC can help promote your app or idea on Instagram,
                             Schoology, and more.
                         </Benefit>
+                        {/*
                         <Benefit name="Funding" index={2}>
                             Maintenance, hosting fees, and domain name costs can be too much for some developers. SEC
-                            can offer grants to cover those costs so financial concerns{/* TODO: wording */} won't stand
-                            in the way of your dream.{/* TODO: more wording */}
+                            can offer grants to cover those costs so financial concerns won't stand in the way of your
+                            dream.
                         </Benefit>
-                        <Benefit name="Domain" index={3}>
+                        */}
+                        <Benefit name="Domain" index={2}>
                             For web projects, SEC can provide a free subdomain on <code>gunnhigh.school</code> or{' '}
                             <code>gunn.one</code> to host your project.
                         </Benefit>
